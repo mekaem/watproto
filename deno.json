@@ -1,0 +1,44 @@
+{
+	"compilerOptions": {
+		"lib": [
+			"deno.ns",
+			"deno.unstable",
+			"dom"
+		],
+		"strict": true,
+		"strictNullChecks": true,
+		"noImplicitAny": true,
+		"noImplicitReturns": true
+	},
+	"tasks": {
+		"dev": "deno run --watch main.ts",
+		"start": "deno run --allow-net --allow-read main.ts"
+	},
+	"fmt": {
+		"useTabs": true,
+		"lineWidth": 80,
+		"indentWidth": 2,
+		"singleQuote": true,
+		"proseWrap": "preserve"
+	},
+	"lint": {
+		"rules": {
+			"include": [
+				"ban-untagged-todo",
+				"require-await",
+				"no-var",
+				"prefer-const"
+			],
+			"exclude": [
+				"no-explicit-any"
+			]
+		}
+	},
+	"lock": true,
+	"imports": {
+		"@atcute/tid": "npm:@atcute/tid@^1.0.1",
+		"@atproto/api": "npm:@atproto/api@^0.13.19",
+		"cbor2": "npm:cbor2@^1.8.0",
+		"multiformats": "npm:multiformats@^13.3.1"
+	}
+}
